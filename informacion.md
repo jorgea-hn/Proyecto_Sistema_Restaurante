@@ -4,3 +4,4 @@
 2. Acceder al entorno     ---- entorno\Scripts\activate
 3. Instalar PyQt5         ---- pip install PyQt5
 4. Instalar el designer   ---- pip install pyqt5-tools
+5. Crear una nueva rama   ---- git checkout -b rama
