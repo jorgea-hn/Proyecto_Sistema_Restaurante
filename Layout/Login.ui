@@ -135,6 +135,33 @@ border-radius:15px;</string>
                   <property name="styleSheet">
                    <string notr="true">background-color: rgb(255, 255, 255);</string>
                   </property>
+                  <property name="inputMask">
+                   <string/>
+                  </property>
+                  <property name="frame">
+                   <bool>true</bool>
+                  </property>
+                  <property name="cursorPosition">
+                   <number>0</number>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                  </property>
+                  <property name="dragEnabled">
+                   <bool>false</bool>
+                  </property>
+                  <property name="readOnly">
+                   <bool>false</bool>
+                  </property>
+                  <property name="placeholderText">
+                   <string>     USER</string>
+                  </property>
+                  <property name="cursorMoveStyle">
+                   <enum>Qt::LogicalMoveStyle</enum>
+                  </property>
+                  <property name="clearButtonEnabled">
+                   <bool>false</bool>
+                  </property>
                  </widget>
                 </item>
                 <item>
@@ -147,6 +174,21 @@ border-radius:15px;</string>
                   </property>
                   <property name="styleSheet">
                    <string notr="true">background-color: rgb(255, 255, 255);</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="echoMode">
+                   <enum>QLineEdit::Password</enum>
+                  </property>
+                  <property name="cursorPosition">
+                   <number>0</number>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                  </property>
+                  <property name="placeholderText">
+                   <string>     PASSWORD</string>
                   </property>
                  </widget>
                 </item>
@@ -203,7 +245,7 @@ border-radius:50%;</string>
                  <string/>
                 </property>
                 <property name="pixmap">
-                 <pixmap>../img/user.png</pixmap>
+                 <pixmap>../img/usuario.png</pixmap>
                 </property>
                 <property name="scaledContents">
                  <bool>true</bool>

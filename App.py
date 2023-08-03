@@ -1,66 +1,122 @@
-import sys
-from PyQt5 import uic
-from PyQt5.QtWidgets import QMainWindow,QApplication
+from PyQt5 import QtWidgets, uic
+import Database
 
-class App(QMainWindow):
-    def __init__(self):
-        super().__init__()
-        # uic.loadUi(".//Layout/Principal.ui",self)
-        uic.loadUi(".//Layout/Menu_mesas.ui",self)
+#iniciar app
+app = QtWidgets.QApplication([])
 
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    GUI = App()
-    GUI.show()
-    sys.exit(app.exec_())
+#cargar archivos .ui
+
+
+principal=uic.loadUi("./Layout/Principal.ui")
+login=uic.loadUi("./Layout/Login.ui")
+mesas = uic.loadUi("./Layout/PrincipalMesas.ui")
+productos = uic.loadUi("./Layout/PrincipalProductos.ui")
+menu_m=uic.loadUi("./Layout/Menu_mesas.ui")
+menu_p=uic.loadUi("./Layout/Menu_Productos.ui")
+
+def Principal_Login():
+    principal.hide()
+    login.show()
+
+
+def Login_Mesas():
+    name=login.lineEdit.text()
+    password=login.lineEdit_2.text()
+
+    if name=="admin" and password=="admin1234":
+        login.hide()
+        mesas.show()
+
+    # else:
+    #     login.label.setText("Usuario o contraseña incorecctos")
+
+
+def Productos_Mesas():
+    productos.hide()
+    mesas.show()
+
+def Productos_MenuP():
+    productos.hide()
+    menu_p.show()
+    
+
+def Mesas_Productos():
+    
+    productos.show()
+
+def Mesas_MenuM():
+    
+    menu_m.show()
+    
+
+
+
+def agregar_mesa():
+    # Obtener los valores de los campos del formulario
+    capacidad = mesas.comboBox_capacidad.currentText()
+
+    # Insertar la nueva mesa en la tabla 'mesas'
+    Database.agregar_datos((capacidad), 'mesas')
+
+def agregar_producto():
+    # Obtener los valores de los campos del formulario
+    nombre = menu_p.lineEdit_nombreProducto.text()
+    precio = int(menu_p.lineEdit_precioProducto.text())
+
+    print("Nombre:", nombre)
+    print("Precio:", precio)
+
+    # Insertar el nuevo producto en la tabla 'productos'
+    Database.agregar_datos((nombre, precio), 'productos')
+
+
+
+    
+#botones 
+
+principal.pushButton_Principal.clicked.connect(Principal_Login)
+
+login.pushButton.clicked.connect(Login_Mesas)
+
+mesas.pushButton_Productos.clicked.connect(Mesas_Productos)
+mesas.pushButton_AgregarMesa.clicked.connect(Mesas_MenuM)
+
+productos.pushButton_Mesas.clicked.connect(Productos_Mesas)
+productos.pushButton_AgregarProducto.clicked.connect(Productos_MenuP)
+
+menu_p.pushButton_Guardar.clicked.connect(agregar_producto)
+
+
+
+
+
+# Crear tablas y agregar datos por defecto
+Database.crear_tablas()
+
+
+#ejecutar 
+
+principal.show()
+app.exec()
+
+
+
 
 
 
 # import sys
 # from PyQt5 import uic
-# from PyQt5.QtWidgets import QMainWindow, QApplication
-
-
-
+# from PyQt5.QtWidgets import QMainWindow,QApplication
 
 # class App(QMainWindow):
 #     def __init__(self):
 #         super().__init__()
-#         self.ui = uic.loadUi(".//Layout/PrincipalMesas.ui",self)
-        
-
-#         self.ui.pushButton_Mesas.clicked.connect(self.abrir_interfaz_mesas)
-#         self.ui.pushButton_Productos.clicked.connect(self.abrir_interfaz_productos)
-
-
-#     def abrir_interfaz_mesas(self):
-#         self.hide() # oculta la interfaz actual
-#         mesas = Mesas() # crea una instancia de la interfaz de mesas
-#         mesas.show() # muestra la interfaz de mesas
-
-#     def abrir_interfaz_productos(self):
-#         self.hide() # oculta la interfaz actual
-#         productos = Productos() # crea una instancia de la interfaz de productos
-#         productos.show() # muestra la interfaz de productos
-
-
-# class Productos(QMainWindow):
-#     def __init__(self):
-#         super().__init__()
-#         self.ui = uic.loadUi(".//Layout/PrincipalProductos.ui",self)
-
-
-# class Mesas(QMainWindow):
-#     def __init__(self):
-#         super().__init__()
-#         self.ui = uic.loadUi(".//Layout/PrincipalMesas.ui",self)
-
+#         uic.loadUi("inicio.ui",self)
 
 # if __name__ == '__main__':
 #     app = QApplication(sys.argv)
 #     GUI = App()
 #     GUI.show()
 #     sys.exit(app.exec_())
-
 
 

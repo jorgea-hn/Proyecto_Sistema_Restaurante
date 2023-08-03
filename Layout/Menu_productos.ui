@@ -194,7 +194,7 @@
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QPushButton" name="_guardar">
+      <widget class="QPushButton" name="pushButton_Guardar">
        <property name="geometry">
         <rect>
          <x>90</x>

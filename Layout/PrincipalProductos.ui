@@ -146,7 +146,7 @@ QPushButton#pushButton_Mesas:hover {
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_Productos_2">
+           <widget class="QPushButton" name="pushButton_Productos">
             <property name="minimumSize">
              <size>
               <width>60</width>
