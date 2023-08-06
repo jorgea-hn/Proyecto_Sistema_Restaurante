@@ -47,7 +47,7 @@
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(217, 217, 217);</string>
+    <string notr="true">background-color: rgb(143, 143, 143);</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::StyledPanel</enum>
@@ -72,6 +72,7 @@
         <widget class="QLabel" name="label_3">
          <property name="font">
           <font>
+           <family>Georgia</family>
            <pointsize>18</pointsize>
           </font>
          </property>
@@ -112,6 +113,7 @@
        </property>
        <property name="font">
         <font>
+         <family>Georgia</family>
          <pointsize>18</pointsize>
         </font>
        </property>
@@ -145,10 +147,28 @@
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>20</y>
+         <y>10</y>
          <width>171</width>
-         <height>20</height>
+         <height>30</height>
         </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Georgia</family>
+         <pointsize>18</pointsize>
+        </font>
        </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);</string>
@@ -197,7 +217,7 @@
       <widget class="QPushButton" name="pushButton_Guardar">
        <property name="geometry">
         <rect>
-         <x>90</x>
+         <x>70</x>
          <y>10</y>
          <width>161</width>
          <height>25</height>
@@ -209,8 +229,16 @@
          <height>25</height>
         </size>
        </property>
+       <property name="font">
+        <font>
+         <family>Georgia</family>
+         <pointsize>18</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(175, 255, 112);</string>
+        <string notr="true">background-color: rgb(200, 200, 200);
+
+border-radius:0px;</string>
        </property>
        <property name="text">
         <string>Guardar</string>
@@ -246,10 +274,28 @@
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>20</y>
+         <y>10</y>
          <width>171</width>
-         <height>20</height>
+         <height>30</height>
         </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Georgia</family>
+         <pointsize>18</pointsize>
+        </font>
        </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);</string>
@@ -292,23 +338,12 @@
         <widget class="QLabel" name="label">
          <property name="font">
           <font>
+           <family>Georgia</family>
            <pointsize>20</pointsize>
           </font>
          </property>
          <property name="text">
-          <string>Producto:</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_2">
-         <property name="font">
-          <font>
-           <pointsize>20</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>#</string>
+          <string>PRODUCTO</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
