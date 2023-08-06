@@ -85,7 +85,7 @@
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QComboBox" name="comboBox">
+      <widget class="QComboBox" name="comboBox_Capacidad">
        <property name="geometry">
         <rect>
          <x>0</x>
@@ -280,7 +280,7 @@
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="pushButton_Guardar">
        <property name="geometry">
         <rect>
          <x>90</x>

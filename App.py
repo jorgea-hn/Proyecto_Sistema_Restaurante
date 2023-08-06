@@ -53,8 +53,8 @@ def Mesas_MenuM():
 
 def agregar_mesa():
     # Obtener los valores de los campos del formulario
-    capacidad = mesas.comboBox_capacidad.currentText()
-
+    capacidad = menu_m.comboBox_Capacidad.currentText()
+    print(capacidad)
     # Insertar la nueva mesa en la tabla 'mesas'
     Database.agregar_datos((capacidad), 'mesas')
 
@@ -71,6 +71,13 @@ def agregar_producto():
 
 
 
+
+def total_Productos():
+    # Mostrar la ventana de productos
+    productos.show()
+
+    # Cargar los datos de la tabla 'productos' en el QTableWidget
+    Database.traer_datos(productos.tableWidget, 'productos')
     
 #botones 
 
@@ -85,10 +92,11 @@ productos.pushButton_Mesas.clicked.connect(Productos_Mesas)
 productos.pushButton_AgregarProducto.clicked.connect(Productos_MenuP)
 
 menu_p.pushButton_Guardar.clicked.connect(agregar_producto)
+menu_m.pushButton_Guardar.clicked.connect(agregar_mesa)
 
 
 
-
+productos.showEvent = lambda event: total_Productos()
 
 # Crear tablas y agregar datos por defecto
 Database.crear_tablas()
