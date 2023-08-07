@@ -69,12 +69,12 @@ def Productos_Mesas():
     mesas.show()
 
 def Productos_MenuP():
-    productos.hide()
+    
     menu_p.show()
     
 
 def Mesas_Productos():
-    
+    mesas.hide()
     productos.show()
 
 def Mesas_MenuM():
