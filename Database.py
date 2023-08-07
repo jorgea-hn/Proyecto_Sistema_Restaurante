@@ -1,11 +1,12 @@
+import contrasenas
 import mysql.connector
 from PyQt5.QtWidgets import QApplication, QMainWindow, QTableWidget, QTableWidgetItem
 def crear_tablas():
     # Conexión a la base de datos
     conn = mysql.connector.connect(
         host="localhost",
-        user="root",
-        password="Juan072004",
+        user=contrasenas.user,
+        password=contrasenas.contraseña,
         database="restaurante"
     )
 
@@ -58,8 +59,8 @@ def agregar_datos(valores, tabla):
     # Conexión a la base de datos
     conn = mysql.connector.connect(
         host="localhost",
-        user="root",
-        password="Juan072004",
+        user=contrasenas.user,
+        password=contrasenas.contraseña,
         database="restaurante"
     )
 
@@ -98,8 +99,8 @@ def traer_datos(table_widget, table_name):
     # Conexión a la base de datos
     conn = mysql.connector.connect(
         host="localhost",
-        user="root",
-        password="Juan072004",
+        user=contrasenas.user,
+        password=contrasenas.contraseña,
         database="restaurante"
     )
 
