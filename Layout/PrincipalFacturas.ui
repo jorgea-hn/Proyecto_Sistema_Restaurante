@@ -238,7 +238,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QPushButton" name="pushButton_Salir">
+           <widget class="QPushButton" name="pushButton">
             <property name="minimumSize">
              <size>
               <width>100</width>
@@ -283,9 +283,6 @@
           <property name="rightMargin">
            <number>20</number>
           </property>
-          <item>
-           <layout class="QGridLayout" name="gridLayout" rowminimumheight="0" columnminimumwidth="0"/>
-          </item>
           <item alignment="Qt::AlignRight">
            <widget class="QFrame" name="frame_2">
             <property name="minimumSize">
@@ -313,75 +310,6 @@
              <property name="rightMargin">
               <number>0</number>
              </property>
-             <item alignment="Qt::AlignHCenter">
-              <widget class="QPushButton" name="pushButton_AgregarMesa">
-               <property name="minimumSize">
-                <size>
-                 <width>140</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>140</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <family>Georgia</family>
-                 <pointsize>14</pointsize>
-                </font>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">background-color: rgb(0, 255, 0);</string>
-               </property>
-               <property name="text">
-                <string>Agregar Mesa</string>
-               </property>
-              </widget>
-             </item>
-             <item alignment="Qt::AlignHCenter">
-              <widget class="QPushButton" name="pushButton_EliminarMesa">
-               <property name="minimumSize">
-                <size>
-                 <width>140</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>140</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <family>Georgia</family>
-                 <pointsize>14</pointsize>
-                </font>
-               </property>
-               <property name="styleSheet">
-                <string notr="true">background-color: rgb(255, 0, 0);</string>
-               </property>
-               <property name="text">
-                <string>Eliminar Mesa</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <spacer name="verticalSpacer_3">
-               <property name="orientation">
-                <enum>Qt::Vertical</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>20</width>
-                 <height>401</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
             </layout>
            </widget>
           </item>
